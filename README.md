@@ -15,3 +15,14 @@ solver=lbfgs
 dual=False
 intercept=True
 Logistic Regression model accuracy: 96.49%
+
+
+uv run python ml_cli.py --logistic 8 4000 newton-cholesky --intercept
+Logistic regression chosen
+Training Logistic Regression
+rs=8
+max_iter=4000
+solver=newton-cholesky
+dual=False
+intercept=True
+Logistic Regression model accuracy: 96.49%
