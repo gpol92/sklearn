@@ -8,11 +8,18 @@ The script accepts arguments to configure a LogisticRegression run and prints th
 
 - Python 3.8+
 - scikit-learn
+- (optional) uv package manager for an alternative install/run workflow
 
 Install dependencies with pip if needed, for example:
 
 ```bash
 pip install scikit-learn
+```
+
+Or with the uv package manager:
+
+```bash
+uv add scikit-learn
 ```
 
 ## Usage
@@ -23,6 +30,12 @@ Example:
 
 ```bash
 python ml_cli.py --logistic 8 4000 lbfgs --intercept
+```
+
+(Or run via the uv package manager if you prefer):
+
+```bash
+uv run python ml_cli.py --logistic 8 4000 lbfgs --intercept
 ```
 
 ## Examples
@@ -70,7 +83,7 @@ Logistic Regression model accuracy: 96.49%
 ## Notes
 
 - The purpose of this CLI is exploratory: to test different parameter combinations for scikit-learn's LogisticRegression and observe which combinations are valid and how they affect results.
-- If you encounter errors with a particular solver or parameter combination, check scikit-learn's LogisticRegression documentation for solver-specific requirements (for example, some solvers do not support the `dual` parameter or certain penalty types).
+- If you encounter errors with a particular solver or parameter combination, check scikit-learn's LogisticRegression documentation for solver-specific requirements (for example, some solvers do not support the `dual` option or require specific data formats).
 
 ## License
 
