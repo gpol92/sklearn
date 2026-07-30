@@ -80,6 +80,25 @@ intercept=True
 Logistic Regression model accuracy: 96.49%
 ```
 
+Example 3
+
+```
+uv run python ml_cli.py --logistic 8 4000 newton-cg --intercept
+```
+
+Example output
+
+```
+Logistic regression chosen
+Training Logistic Regression
+rs=8
+max_iter=4000
+solver=newton-cg
+dual=False
+intercept=True
+Logistic Regression model accuracy: 96.49%
+```
+
 ## Notes
 
 - The purpose of this CLI is exploratory: to test different parameter combinations for scikit-learn's LogisticRegression and observe which combinations are valid and how they affect results.
